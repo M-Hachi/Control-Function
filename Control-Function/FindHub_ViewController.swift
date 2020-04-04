@@ -45,7 +45,7 @@ class FindHub_ViewController: UIViewController {
             if(connection.Status[0]==1){//接続していたら切断する
                 connection.Status[0]=0
                 print("Hub0 turn Off Action")
-                HubActions(No: 0, ActionTypes: 0x01)
+                HubActions_Downstream(HubId: 0, ActionTypes: 0x01)
             }
         }
     }
@@ -61,7 +61,8 @@ class FindHub_ViewController: UIViewController {
             if(connection.Status[1]==1){
                 connection.Status[1]=0
                 print("Hub1 turn Off Action")
-                HubActions(No: 1, ActionTypes: 0x01)}
+                HubActions_Downstream(HubId: 1, ActionTypes: 0x01)
+            }
         }
     }
     
@@ -76,7 +77,8 @@ class FindHub_ViewController: UIViewController {
             if(connection.Status[2]==1){
                 connection.Status[2]=0
                 print("Hub2 turn Off Action")
-                HubActions(No: 2, ActionTypes: 0x01)}
+                HubActions_Downstream(HubId: 2, ActionTypes: 0x01)
+            }
         }
     }
     
@@ -91,7 +93,8 @@ class FindHub_ViewController: UIViewController {
             if(connection.Status[3]==1){
                 connection.Status[3]=0
                 print("Hub3 turn Off Action")
-                HubActions(No: 3, ActionTypes: 0x01)}
+                HubActions_Downstream(HubId: 3, ActionTypes: 0x01)
+            }
         }
     }
     

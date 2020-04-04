@@ -134,10 +134,11 @@ extension FindHub_ViewController: CBPeripheralDelegate {
                     //HubPropertiesUpdate(data: data, HubID: Hub)
                     HubProperties_Upstream(HubId: Hub, ReceivedData: data)
                 case 0x03:
-                    //print("HubAlert Update:",data )
-                    HubAlertsUpdate(data: data, HubID: Hub)
+                    //HubAlertsUpdate(data: data, HubID: Hub)
+                    HubAlerts_Upstream(HubId: Hub, ReceivedData: data)
                 case 0x05:
-                    GenericErrorMessagesUpdate(data: data, HubID: Hub)
+                    //GenericErrorMessagesUpdate(data: data, HubID: Hub)
+                    GenericErrorMessages_Upstream(HubId: Hub, data: data)
                 case 0x44:
                     PortModeInformation(data: data, HubID: Hub )
                 case 0x45:

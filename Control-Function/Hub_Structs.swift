@@ -69,6 +69,48 @@ struct AttatchedHW{
     var PortD: Int
     var PortE: Int
     var PortF: Int
+    
+    mutating func DetatchedIo(Port:Int){
+        switch Port {
+        case 0:
+            self.PortA=0
+        case 1:
+            self.PortB=0
+        case 2:
+            self.PortC=0
+        case 3:
+            self.PortD=0
+        case 4:
+            self.PortE=0
+        case 5:
+            self.PortF=0
+        default:
+            print("Error in Port")
+        }
+    }
+    
+    mutating func AttatchedIo(Port:Int, IoTypeId:Int, HardwareRevision:Int, SoftwareRevision:Int){
+        switch Port {
+        case 0:
+            self.PortA=IoTypeId
+        case 1:
+            self.PortB=IoTypeId
+        case 2:
+            self.PortC=IoTypeId
+        case 3:
+            self.PortD=IoTypeId
+        case 4:
+            self.PortE=IoTypeId
+        case 5:
+            self.PortF=IoTypeId
+        default:
+            print("Error in Port")
+        }
+    }
+    
+    mutating func AttatchedVirtualIo(Port:Int, IoTypeId:Int, PortIdA:Int, PortIdB:Int){
+            print("Port\(PortIdA) and Port\(PortIdA) forms Vport\(Port)")
+    }
 }
 var HubHW = [AttatchedHW](repeating: AttatchedHW(PortA: 0, PortB: 0, PortC: 0, PortD: 0, PortE: 0, PortF: 0), count: 10)
 

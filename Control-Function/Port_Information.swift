@@ -10,9 +10,7 @@ import Foundation
 import UIKit
 import CoreBluetooth
 
-
-
-//
+/*
 func HubAttachedIO(No: Int){//04
     //0x090004VV02YYYYAABB
     legohub.Peripheral[No]!.readValue(for: legohub.Characteristic[No]!)
@@ -29,21 +27,23 @@ func HubAttachedIO(No: Int){//04
         print("Error in HubAttachedIO")
         print("Port Info is:",data )
     }
-}
+}*/
 
+/*
 func PortInformationRequest(No: Int, PortID: UInt8, InfoType: UInt8) {//21
     //print("No: \(No), PortID: \(PortID), InfoType: \(InfoType)" )
     let bytes: [UInt8] = [0x05, 0x00, 0x21, PortID, InfoType]
     //let bytes : [UInt8] = [ 0x08, 0x00, 0x81, 0x32, 0x11, 0x51, 0x00, UInt8(Int16(LED_color)) ]
     let data = Data(_:bytes)
     legohub.Peripheral[No]!.writeValue(data, for: legohub.Characteristic[No]!, type: .withoutResponse)
-}
+}*/
 
+/*
 func PortModeInformationRequest(No: Int, Port: UInt8, Mode: UInt8, InfoType: UInt8){//22
     let bytes : [UInt8] = [ 0x06, 0x00, 0x22, Port, Mode, InfoType]//request update
     let data = Data(_:bytes)
     legohub.Peripheral[No]!.writeValue(data, for: legohub.Characteristic[No]!, type: .withResponse)
-}
+}*/
 
 
 func PortInputFormatSetup(No: Int, PortID: UInt8, Mode: UInt8, DInterval: Double, NotificationE: UInt8){//41

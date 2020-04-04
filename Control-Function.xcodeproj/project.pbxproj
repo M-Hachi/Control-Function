@@ -41,6 +41,7 @@
 		4ED324872438833700F867FF /* VirtualPortSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED324862438833700F867FF /* VirtualPortSetup.swift */; };
 		4ED324892438834E00F867FF /* PortOutputCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED324882438834E00F867FF /* PortOutputCommand.swift */; };
 		4ED3248B2438836D00F867FF /* PortOutputCommandFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED3248A2438836D00F867FF /* PortOutputCommandFeedback.swift */; };
+		4ED3248D2438D43400F867FF /* PortModeInformationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED3248C2438D43300F867FF /* PortModeInformationRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		4ED324862438833700F867FF /* VirtualPortSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualPortSetup.swift; sourceTree = "<group>"; };
 		4ED324882438834E00F867FF /* PortOutputCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortOutputCommand.swift; sourceTree = "<group>"; };
 		4ED3248A2438836D00F867FF /* PortOutputCommandFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortOutputCommandFeedback.swift; sourceTree = "<group>"; };
+		4ED3248C2438D43300F867FF /* PortModeInformationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortModeInformationRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,12 +144,14 @@
 				4ED3245B24387E6400F867FF /* hub_func.swift */,
 				4ED3245E24387E6500F867FF /* Hub_Structs.swift */,
 				4ED3245624387E6400F867FF /* motor_func.swift */,
+				4ED3245824387E6400F867FF /* Port_Information.swift */,
 				4ED3246A24387FCF00F867FF /* HubProperties.swift */,
 				4ED3246C24387FE400F867FF /* HubActions.swift */,
 				4ED3246E24387FFC00F867FF /* HubAlerts.swift */,
 				4ED324702438801B00F867FF /* HubAttatchedIo.swift */,
 				4ED324722438804600F867FF /* GenericErrorMessages.swift */,
 				4ED324742438807500F867FF /* PortInformationRequest.swift */,
+				4ED3248C2438D43300F867FF /* PortModeInformationRequest.swift */,
 				4ED32476243880A900F867FF /* PortInputFormatSetup(Single).swift */,
 				4ED32478243880D200F867FF /* PortInputFormatSetup(CombinedMode).swift */,
 				4ED3247A243880F400F867FF /* PortInformation.swift */,
@@ -159,7 +163,6 @@
 				4ED324862438833700F867FF /* VirtualPortSetup.swift */,
 				4ED324882438834E00F867FF /* PortOutputCommand.swift */,
 				4ED3248A2438836D00F867FF /* PortOutputCommandFeedback.swift */,
-				4ED3245824387E6400F867FF /* Port_Information.swift */,
 				4ED3245724387E6400F867FF /* WriteDirectModeData.swift */,
 				4ED324362438776B00F867FF /* SceneDelegate.swift */,
 				4ED324382438776B00F867FF /* ViewController.swift */,
@@ -307,6 +310,7 @@
 				4ED324872438833700F867FF /* VirtualPortSetup.swift in Sources */,
 				4ED3248B2438836D00F867FF /* PortOutputCommandFeedback.swift in Sources */,
 				4ED3246824387E6500F867FF /* Hub_Structs.swift in Sources */,
+				4ED3248D2438D43400F867FF /* PortModeInformationRequest.swift in Sources */,
 				4ED3246724387E6500F867FF /* Gyro_func.swift in Sources */,
 				4ED324812438815000F867FF /* PortValue(CombinedMode).swift in Sources */,
 				4ED3246924387E6500F867FF /* FindHub_ViewController.swift in Sources */,

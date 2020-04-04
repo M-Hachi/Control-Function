@@ -14,8 +14,7 @@
 import Foundation
 //aaa
 func DidConnectToHub(HubID: Int){
-    HubAlerts(HubID: HubID, AlertType: 0x04, AlertOperation: 0x01)
-    
+    HubAlerts_Downstream(HubId: HubID, AlertType: 0x04, AlertOperation: 0x01)
     //LED
     PortInputFormatSetup(No: HubID, PortID: 0x32, Mode: 0x00, DInterval: 1, NotificationE: 0x01)
     SetRgbColorNo(LED_color: HubID, No: HubID, Port: 0x32, Mode: 0x00)
@@ -108,10 +107,12 @@ func SetProfile2(){
  }
  }*/
 
+/*
 func AttitudeHubCallibration(){
     for mode in 0...6{
         for type in 0...4{
             PortModeInformationRequest(No: 1, Port: 0x01, Mode: UInt8(mode), InfoType: UInt8(type))
+            PortModeInformationRequest(HubId: 1, PortId: <#T##UInt8#>, Mode: <#T##UInt8#>, InformationType: <#T##UInt8#>)
         }
     }
     /*PortModeInformationRequest(No: 1, Port: 0x01, Mode: 0x00, InfoType: 0x01)
@@ -123,12 +124,13 @@ func AttitudeHubCallibration(){
     //PortInformationRequest(No: 1, PortID: 0x00, InfoType: 0x00)
     PortInputFormatSetup(No: 1, PortID: 0x00, Mode: 0x03, DInterval: 2, NotificationE: 0x01)
     PortInputFormatSetup(No: 1, PortID: 0x01, Mode: 0x03, DInterval: 2, NotificationE: 0x01)
-}
+}*/
+
 func GetPortModeInfo(Hub: Int, port:Int){
     print("port:\(port)")
     for mode in 0...10{
         for type in 0...4{
-            PortModeInformationRequest(No: Hub, Port: UInt8(port), Mode: UInt8(mode), InfoType: UInt8(type))
+            PortModeInformationRequest(HubId: Hub, PortId: UInt8(port), Mode: UInt8(mode), InformationType: UInt8(type))
         }
     }
 }

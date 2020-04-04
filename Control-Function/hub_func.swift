@@ -35,14 +35,16 @@ func HubPropertiesUpdate(data: [UInt8], HubID: Int){//01
         }
     }
 }*/
-
+/*
 func HubActions(No: Int, ActionTypes: UInt8) {//02
     print("Hubactions: ", ActionTypes)
     let bytes : [UInt8] = [ 0x04, 0x00, 0x02, ActionTypes]
     let data = Data(_:bytes)
     legohub.Peripheral[No]!.writeValue(data, for: legohub.Characteristic[No]!, type: .withResponse)
 }
+*/
 
+/*
 func HubAlerts(HubID: Int, AlertType: UInt8, AlertOperation: UInt8) {//03
     print("AlertType: ", AlertType)
     let bytes : [UInt8] = [ 0x05, 0x00, 0x03, AlertType, AlertOperation]
@@ -51,12 +53,14 @@ func HubAlerts(HubID: Int, AlertType: UInt8, AlertOperation: UInt8) {//03
 }
 func HubAlertsUpdate(data: [UInt8], HubID: Int){//03
     print("AlertType:\(data[3]), AlertOperation:\(data[4]), Alertpayload:\(data[5])")
-}
+}*/
+/*
 func GenericErrorMessagesUpdate(data: [UInt8], HubID: Int){//05
     //String( value[3], radix: 16)
     print("Error:CType:\(String(data[3],radix: 16) ), ErrorCode:\(data[4])")
-}
+}*/
 
+/*
 func enable_battery(No: Int){
     print("enable_battery")
     let bytes : [UInt8] = [ 0x05, 0x00, 0x01, 0x06, 0x02]//enable
@@ -117,7 +121,7 @@ func return_SystemType(No:Int)->Int{
         ReadData.value = data
         return 1
     }
-}
+}*/
 func return_PortModeInformation(No:Int)->Int{
     legohub.Peripheral[No]!.readValue(for: legohub.Characteristic[No]!)
     let characteristicData = legohub.Characteristic[No]?.value

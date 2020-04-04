@@ -7,3 +7,9 @@
 //
 
 import Foundation
+import CoreBluetooth
+
+func GenericErrorMessages_Upstream(HubId: Int, data: [UInt8]){//05
+    //String( value[3], radix: 16)
+    print("Error:CommandType:\(data[3]), ErrorCode:\(data[4])")
+}
