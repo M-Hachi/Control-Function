@@ -45,7 +45,7 @@ func PortModeInformationRequest(No: Int, Port: UInt8, Mode: UInt8, InfoType: UIn
     legohub.Peripheral[No]!.writeValue(data, for: legohub.Characteristic[No]!, type: .withResponse)
 }*/
 
-
+/*
 func PortInputFormatSetup(No: Int, PortID: UInt8, Mode: UInt8, DInterval: Double, NotificationE: UInt8){//41
     let DIntervalArray: [UInt8] =  DtoInt32(double: DInterval)
     let bytes: [UInt8] = [0x0A, 0x00, 0x41, PortID, Mode,DIntervalArray[0],DIntervalArray[1],DIntervalArray[2],DIntervalArray[3], NotificationE]
@@ -56,8 +56,8 @@ func PortInputFormatSetup(No: Int, PortID: UInt8, Mode: UInt8, DInterval: Double
     }else{
             print("41: no hub!!!")
         }
-}
-
+}*/
+/*
 func PortInformation(No: Int)->Int{//43
     legohub.Peripheral[No]!.readValue(for: legohub.Characteristic[No]!)
     let characteristicData = legohub.Characteristic[No]?.value
@@ -72,8 +72,8 @@ func PortInformation(No: Int)->Int{//43
      return 1
      }*/
     return 1
-}
-
+}*/
+/*
 func PortModeInformation(data: [UInt8], HubID: Int){//44
     //var k=6
     var max = 0
@@ -116,7 +116,7 @@ func PortModeInformation(data: [UInt8], HubID: Int){//44
     }else{
         print("unknown Information Type" )
     }
-}
+}*/
 /*func PortModeInformation(No:Int)->Int{//44
  legohub.Peripheral[No]!.readValue(for: legohub.Characteristic[No]!)
  let characteristicData = legohub.Characteristic[No]?.value

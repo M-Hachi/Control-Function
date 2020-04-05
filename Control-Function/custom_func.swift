@@ -2,8 +2,8 @@
 //  custom_func.swift
 //  swift02->SiriTest
 //
-//  Created by 森内　映人 on 2019/09/30.
-//  Copyright © 2019 森内　映人. All rights reserved.
+//  Created by xxxx on 2019/09/30.
+//  Copyright © 2019 xxxx. All rights reserved.
 //
 
 //Hub0: CoreHub for Mk-8
@@ -16,7 +16,7 @@ import Foundation
 func DidConnectToHub(HubID: Int){
     HubAlerts_Downstream(HubId: HubID, AlertType: 0x04, AlertOperation: 0x01)
     //LED
-    PortInputFormatSetup(No: HubID, PortID: 0x32, Mode: 0x00, DInterval: 1, NotificationE: 0x01)
+    PortInputFormatSetup_Single(HubId: HubID, PortId: 0x32, Mode: 0x00, DeltaInterval: 1, NotificationEnabled: 0x01)
     SetRgbColorNo(LED_color: HubID, No: HubID, Port: 0x32, Mode: 0x00)
     
     //HubPropertiesSet(Hub: HubID, Reference: 0x02, Operation: 0x02)//enable_Button
@@ -24,15 +24,13 @@ func DidConnectToHub(HubID: Int){
     //synthesizer.speak(utterance_DidConnect)
     switch HubID {
     case 0:
-        PortInputFormatSetup(No: 0, PortID: 0x01, Mode: 0x02, DInterval: 2, NotificationE: 0x01)
-        PortInputFormatSetup(No: 0, PortID: 0x63, Mode: 0x00, DInterval: 2, NotificationE: 0x01)
+        //PortInputFormatSetup(No: 0, PortID: 0x01, Mode: 0x02, DInterval: 2, NotificationE: 0x01)
+        PortInputFormatSetup_Single(HubId: 0, PortId: 0x01, Mode: 0x02, DeltaInterval: 3, NotificationEnabled: 0x01)
+        //PortInputFormatSetup(No: 0, PortID: 0x63, Mode: 0x00, DInterval: 2, NotificationE: 0x01)
+        PortInputFormatSetup_Single(HubId: 0, PortId: 0x63, Mode: 0x00, DeltaInterval: 3, NotificationEnabled: 0x01)
         
-        PortInputFormatSetup(No: 0, PortID: 0x32, Mode: 0x01, DInterval: 1, NotificationE: 0x01)
-        
-        
-        //PortInputFormatSetup(No: 0, PortID: 0x00, Mode: 0x05, DInterval: 1, NotificationE: 0x01)
-        
-    //SetRgbColorNo(LED_color: 2, No: 0, Port: 0x32, Mode: 0x00)
+        //PortInputFormatSetup(No: 0, PortID: 0x32, Mode: 0x01, DInterval: 1, NotificationE: 0x01)
+        PortInputFormatSetup_Single(HubId: 0, PortId: 0x32, Mode: 0x01, DeltaInterval: 1, NotificationEnabled: 0x01)
     default:
         print("Warning: Unknown Hub!")
     }

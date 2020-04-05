@@ -140,7 +140,8 @@ extension FindHub_ViewController: CBPeripheralDelegate {
                     //GenericErrorMessagesUpdate(data: data, HubID: Hub)
                     GenericErrorMessages_Upstream(HubId: Hub, data: data)
                 case 0x44:
-                    PortModeInformation(data: data, HubID: Hub )
+                    //PortModeInformation(data: data, HubID: Hub )
+                    PortModeInformation_Upstream(HubId: Hub, ReceivedData: data)
                 case 0x45:
                     PortValueSingleFeedback(data: data, HubID: Hub )
                 case 0x82:
