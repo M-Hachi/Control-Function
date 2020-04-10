@@ -158,7 +158,7 @@ func PortModeInformation(data: [UInt8], HubID: Int){//44
  return 1
  }
  }*/
-
+/*
 func PortValueSingle(No: Int)->[UInt8]{//45
     legohub.Peripheral[No]!.readValue(for: legohub.Characteristic[No]!)
     let characteristicData = legohub.Characteristic[No]?.value
@@ -261,7 +261,7 @@ func PortValueSingleFeedback(data: [UInt8], HubID: Int){//45
         print(data)
         value = datatoDouble(data: data)[0]
         print("Hub[\(HubID)] Port[\(data[3])] value: \(value)")
-    }
+    }*/
     /*if(data[3] == 0x63){
      //DriveHub.yaw = Int16toInt(value: [data[5],data[4]])
         HubAtt[HubID].yaw = Int16toInt(value: [data[5],data[4]])
@@ -280,6 +280,6 @@ func PortValueSingleFeedback(data: [UInt8], HubID: Int){//45
             memcpy(&value, [data[4],data[5],data[6],data[7]], 4)
         }
         print("Hub[\(HubID)] Port[\(data[3])] value: \(value)")
-    }*/
-}
+    }
+}*/
 

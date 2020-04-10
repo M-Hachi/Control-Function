@@ -122,6 +122,7 @@ func return_SystemType(No:Int)->Int{
         return 1
     }
 }*/
+/*
 func return_PortModeInformation(No:Int)->Int{
     legohub.Peripheral[No]!.readValue(for: legohub.Characteristic[No]!)
     let characteristicData = legohub.Characteristic[No]?.value
@@ -148,7 +149,7 @@ func return_PortModeInformation(No:Int)->Int{
         ReadData.value = data
         return 1
     }
-}
+}*/
 
 /*func read_degA_set(No:Int){
     let bytes : [UInt8] = [0x0a,0x00,0x41,0x00, 0x02,0x00,0x00,0x00,0x64,0x01]//enable

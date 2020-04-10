@@ -22,13 +22,15 @@ import CoreBluetooth
     //characteristicData?.first(where:{$0>10})
     print("return is", characteristicData![0],"!!")
 }*/
+/*
 func VirtualPortSetup(No: Int, PortA: UInt8, PortB: UInt8) {
     var bytes : [UInt8]
     bytes = [0x06,0x00,0x61,0x01, PortA,PortB]
     print("wrote \(bytes)")
     let data = Data(bytes: bytes, count: MemoryLayout.size(ofValue: bytes))
     legohub.Peripheral[No]?.writeValue(data, for: legohub.Characteristic[No]!, type: .withResponse)
-}
+}*/
+
 func PresetEncoder(HubID: Int, Port:UInt8, Mode:UInt8, Position :Double) {//N/A
     var bytes : [UInt8]
     let PosArray = DtoInt32(double: Position)
@@ -38,7 +40,8 @@ func PresetEncoder(HubID: Int, Port:UInt8, Mode:UInt8, Position :Double) {//N/A
     legohub.Peripheral[HubID]?.writeValue(data, for: legohub.Characteristic[HubID]!, type: .withResponse)
 }
 
-func SetAccTime(No: Int, Port:UInt8, Time: Int, ProfileNo :UInt8) {//0x05
+/*
+func SetAccTime(No: Int, Port:UInt8, Time: Int, ProfileNo :UInt8){//0x05
     let bytes : [UInt8]
     let TimeArray = InttoInt16(value: Time)
     bytes = [ 0x09,0x00,0x81,Port, 0x10,0x05, TimeArray[0], TimeArray[1], ProfileNo]
@@ -52,8 +55,9 @@ func SetDecTime(No: Int, Port:UInt8, Time: Int, ProfileNo :UInt8) {//0x06
     bytes = [ 0x09,0x00,0x81,Port, 0x10,0x06, TimeArray[0], TimeArray[1], ProfileNo]
     let data = Data(bytes: bytes, count: MemoryLayout.size(ofValue: bytes))
     legohub.Peripheral[No]?.writeValue(data, for: legohub.Characteristic[No]!, type: .withResponse)
-}
+}*/
 
+/*
 func StartSpeed(Hub: Int, Port:UInt8, Speed:Double, MaxPower:UInt8, UseProfie:UInt8) {//0x07
     var bytes : [UInt8]
     var SpeedOut :Double
@@ -67,7 +71,7 @@ func StartSpeed(Hub: Int, Port:UInt8, Speed:Double, MaxPower:UInt8, UseProfie:UI
     //print("wrote \(bytes)")
     let data = Data(bytes: bytes, count: 9)
     legohub.Peripheral[Hub]?.writeValue(data, for: legohub.Characteristic[Hub]!, type: .withoutResponse)
-}
+}*/
 
 func StartSpeedSynchronized(No: Int) {//0x08
     var bytes : [UInt8]
@@ -81,7 +85,7 @@ func StartSpeedSynchronized(No: Int) {//0x08
     legohub.Peripheral[No]?.writeValue(data, for: legohub.Characteristic[No]!, type: .withResponse)
 }
 
-
+/*
 func GotoAbsolutePosition(Hub:Int, Port:UInt8, AbsPos:Double, Speed:UInt8, MaxPower:UInt8, EndState:UInt8, UseProfie:UInt8) {//0x0D
     var bytes : [UInt8]
     //CommonHeader, PortID, S&Cinfo, SubCommand(=motor control), payload(=power, degrees, etc)
@@ -91,7 +95,7 @@ func GotoAbsolutePosition(Hub:Int, Port:UInt8, AbsPos:Double, Speed:UInt8, MaxPo
     //print("wrote \(bytes)")
     let data = Data(bytes: bytes, count: 14)
     legohub.Peripheral[Hub]?.writeValue(data, for: legohub.Characteristic[Hub]!, type: .withoutResponse)
-}
+}*/
 
 func StartPower(Hub:Int, Port:UInt8, Power:Double) {
     var bytes : [UInt8]
@@ -112,6 +116,7 @@ func StartSpeedForDegreesA(No: Int) {
     //print(MemoryLayout.size(ofValue: bytes))
     legohub.Peripheral[No]?.writeValue(data, for: legohub.Characteristic[No]!, type: .withResponse)
 }
+
 func StartSpeedForDegrees(Hub:Int, Port:UInt8, Degrees:Double, Speed:Double, MaxPower:UInt8, EndState:UInt8, UseProfie:UInt8) {//0x0B = 11
     var bytes : [UInt8]
     let AbsPosArray = DtoInt32(double: Degrees)

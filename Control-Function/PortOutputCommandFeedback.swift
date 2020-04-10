@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+
+func PortOutputCommandFeedback_Upstream(data: [UInt8], HubID: Int){//82
+    if(data[4]==10){
+        //print("Hub[\(HubID)] Port[\(data[3])] is Busy/Full")
+        connection.Buffer[HubID][Int(data[3])] = 0x10
+    }
+}

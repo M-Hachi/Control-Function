@@ -29,6 +29,6 @@ func PortInputFormatSetup_Single(HubId: Int, PortId: UInt8, Mode: UInt8, DeltaIn
     if(connection.Status[HubId]==1){
         legohub.Peripheral[HubId]!.writeValue(data, for: legohub.Characteristic[HubId]!, type: .withResponse)
     }else{
-            print("PortInputFormatSetup_Single: No Hub!!!")
-        }
+        print("PortInputFormatSetup_Single: No Hub!!!")
+    }
 }

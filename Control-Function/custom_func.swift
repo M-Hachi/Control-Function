@@ -44,39 +44,39 @@ func SetProfile(){
      SetAccTime(No: 0, Port: 0x01, Time: [0x00,0x2A], ProfileNo: 0x01)
      SetDecTime(No: 0, Port: 0x01, Time: [0x00,0x2A], ProfileNo: 0x02)*/
     
-    SetAccTime(No: 2, Port: 0x00, Time: 4000, ProfileNo: 0x01)
+    /*SetAccTime(No: 2, Port: 0x00, Time: 4000, ProfileNo: 0x01)
     SetDecTime(No: 2, Port: 0x00, Time: 4000, ProfileNo: 0x02)
     SetAccTime(No: 2, Port: 0x01, Time: 4000, ProfileNo: 0x01)
     SetDecTime(No: 2, Port: 0x01, Time: 4000, ProfileNo: 0x02)
     SetAccTime(No: 2, Port: 0x03, Time: 2000, ProfileNo: 0x01)
-    SetDecTime(No: 2, Port: 0x03, Time: 2000, ProfileNo: 0x02)
+    SetDecTime(No: 2, Port: 0x03, Time: 2000, ProfileNo: 0x02)*/
 }
 func SetProfile0(){
-    SetAccTime(No: 0, Port: 0x00, Time: 200, ProfileNo: 0x01)
+    /*SetAccTime(No: 0, Port: 0x00, Time: 200, ProfileNo: 0x01)
     SetDecTime(No: 0, Port: 0x00, Time: 200, ProfileNo: 0x01)
     SetAccTime(No: 0, Port: 0x01, Time: 1000, ProfileNo: 0x01)
-    SetDecTime(No: 0, Port: 0x01, Time: 1000, ProfileNo: 0x01)
+    SetDecTime(No: 0, Port: 0x01, Time: 1000, ProfileNo: 0x01)*/
 }
 
 func SetProfile1(){
-    SetAccTime(No: 1, Port: 0x00, Time: 200, ProfileNo: 0x01)
+    /*SetAccTime(No: 1, Port: 0x00, Time: 200, ProfileNo: 0x01)
     SetDecTime(No: 1, Port: 0x00, Time: 200, ProfileNo: 0x01)
     SetAccTime(No: 1, Port: 0x01, Time: 200, ProfileNo: 0x01)
     SetDecTime(No: 1, Port: 0x01, Time: 200, ProfileNo: 0x01)
     SetAccTime(No: 1, Port: 0x02, Time: 200, ProfileNo: 0x01)
-    SetDecTime(No: 1, Port: 0x02, Time: 200, ProfileNo: 0x01)
+    SetDecTime(No: 1, Port: 0x02, Time: 200, ProfileNo: 0x01)*/
 }
 
 func SetProfile2(){
     print("SetProfile2")
-    SetAccTime(No: 2, Port: 0x00, Time: 700, ProfileNo: 0x03)
+    /*SetAccTime(No: 2, Port: 0x00, Time: 700, ProfileNo: 0x03)
     SetDecTime(No: 2, Port: 0x00, Time: 700, ProfileNo: 0x03)
     SetAccTime(No: 2, Port: 0x01, Time: 700, ProfileNo: 0x03)
     SetDecTime(No: 2, Port: 0x01, Time: 700, ProfileNo: 0x03)
     SetAccTime(No: 2, Port: 0x03, Time: 1500, ProfileNo: 0x02)
     SetDecTime(No: 2, Port: 0x03, Time: 1500, ProfileNo: 0x02)
     SetAccTime(No: 2, Port: 0x03, Time: 8000, ProfileNo: 0x03)
-    SetDecTime(No: 2, Port: 0x03, Time: 8000, ProfileNo: 0x03)
+    SetDecTime(No: 2, Port: 0x03, Time: 8000, ProfileNo: 0x03)*/
 }
 
 
@@ -162,10 +162,10 @@ func GetPortModeInfo(Hub: Int, port:Int){
  GotoAbsolutePosition(Hub:1, Port:0x01, AbsPos:Roll, Speed:50, MaxPower:100, EndState:0x7e, UseProfie:0x11)
  //print("Roll:",att.roll_det)//roll
  }*/
-
+/*
 func AttitudeHubSetRange(){
     StartSpeed(Hub: 1, Port: 0x00, Speed: -90, MaxPower: 50, UseProfie: 0x11)
-}
+}*/
 
 /*func DriveHubTimer1(){//yawControl
  //Hub2: DriveHub
@@ -259,11 +259,11 @@ func AttitudeHubSetRange(){
  StartSpeed(Hub: 2, Port: 0x01, Speed: LSpeed, MaxPower: 100, UseProfie: 0x33)
  }*/
 
-
+/*
 func FullPower(){
     StartSpeed(Hub: 2, Port: 0x00, Speed: 0x32, MaxPower: 0x64, UseProfie: 0x21)
     StartSpeed(Hub: 2, Port: 0x01, Speed: 0x32, MaxPower: 0x64, UseProfie: 0x21)
-}
+}*/
 
 /*func CalcRoll(roll: Double)->Double{
  var Mul: Double

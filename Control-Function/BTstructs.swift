@@ -143,7 +143,10 @@ extension FindHub_ViewController: CBPeripheralDelegate {
                     //PortModeInformation(data: data, HubID: Hub )
                     PortModeInformation_Upstream(HubId: Hub, ReceivedData: data)
                 case 0x45:
-                    PortValueSingleFeedback(data: data, HubID: Hub )
+                    //PortValueSingleFeedback(data: data, HubID: Hub )
+                    PortValue_Single(HubId: Hub, ReceivedData: data)
+                case 0x47:
+                    PortInputFormat_Upstream(HubId: Hub, ReceivedData: data)
                 case 0x82:
                     PortOutputCommandFeedback(data: data, HubID: Hub )
                 default:
