@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import CoreBluetooth
-
+//test
 let legohubServiceCBUUID = CBUUID(string: "00001623-1212-EFDE-1623-785FEABCD123")
 let legohubCharacteristicCBUUID = CBUUID(string: "00001624-1212-EFDE-1623-785FEABCD123")
 
