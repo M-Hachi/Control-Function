@@ -5,7 +5,7 @@
 //  Created by 森内　映人 on 2019/10/20.
 //  Copyright © 2019 森内　映人. All rights reserved.
 //
-//githubtest4
+//githubtest7
 import Foundation
 //var DriveHub = [Attitude].self
 /*struct Attitude{
