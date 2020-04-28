@@ -12,7 +12,7 @@
 //Hub3: SubHub for IRJammers
 
 import Foundation
-//tet11
+//test20
 public func DidConnectToHub(HubID: Int){
     HubAlerts_Downstream(HubId: HubID, AlertType: 0x04, AlertOperation: 0x01)
     //LED
