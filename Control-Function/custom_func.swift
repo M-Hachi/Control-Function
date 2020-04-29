@@ -2,10 +2,6 @@
 //  custom_func.swift
 //  swift02->SiriTest
 //
-//  Created by xxxx on 2019/09/30.
-//  Copyright © 2019 xxxx. All rights reserved.
-//
-
 //Hub0: CoreHub for Mk-8
 //Hub1: AttitudeHub
 //Hub2: DriveHub
