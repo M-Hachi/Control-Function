@@ -16,7 +16,7 @@ public func DidConnectToHub(HubID: Int){
     SetRgbColorNo(LED_color: HubID, No: HubID, Port: 0x32, Mode: 0x00)
     
     //HubPropertiesSet(Hub: HubID, Reference: 0x02, Operation: 0x02)//enable_Button
-    HubProperties_Downstream(HubId: HubID, HubPropertyReference: 0x02, HubPropertyOperation: 0x02)
+    //HubProperties_Downstream(HubId: HubID, HubPropertyReference: 0x02, HubPropertyOperation: 0x02)
     //synthesizer.speak(utterance_DidConnect)
     switch HubID {
     case 0:
